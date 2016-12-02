@@ -77,7 +77,6 @@ ShowDate.prototype={
         var y = dates.getFullYear(),
             m = dates.getMonth()+1,
             d = dates.getDate();
-            console.log(y+"-"+m+"-"+d)
             $('.dar').val(y+"-"+m+"-"+d)
         if(date < new Date()){
         	alert("请输入的日期大于"+new Date())
