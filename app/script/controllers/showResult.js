@@ -17,15 +17,12 @@ showResult.controller('ShowResultController',function($scope,$stateParams,base){
     	var num = list.values[i].num;
     	if(list.values[i].kind=="1"){
     		if(num =='0'){
-    			console.log(num)
     		    $scope.countRa=$scope.countRa+1
     	 	}else if(num=='1'){
-    	 		console.log(num)
                 $scope.countRb=$scope.countRb+1
     	 	}	
     	}
     	if(list.values[i].kind=="2"){
-    		console.log(num)
     		if(num.indexOf('0') !=-1){
     			console.log(num.indexOf('0'))
     		    $scope.countMa=$scope.countMa+1
