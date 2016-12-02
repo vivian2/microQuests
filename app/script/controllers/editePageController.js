@@ -109,11 +109,12 @@ editePageMoudle.controller('EditPagesController',function($scope,$stateParams,ba
         if(localStorage.getItem('lists') == null || it[m]===undefined){
             alert("请先保存问卷")            
             $scope.myhref="#/"+$stateParams.indexId
+        }else{
+           it[m].status="发布中";
+           localStorage.setItem("lists",JSON.stringify(it))
+           alert("已发布")
+           $scope.myhref="#/"
         }
-        it[m].status="发布中";
-        localStorage.setItem("lists",JSON.stringify(it))
-        alert("已发布")
-        $scope.myhref="#/"
     }
     ShowDateService.create()
     $('tbody').click(ShowDateService.severalClick().clickEvent);
