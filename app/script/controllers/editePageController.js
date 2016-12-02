@@ -97,12 +97,10 @@ editePageMoudle.controller('EditPagesController',function($scope,$stateParams,ba
         }else{
             base.splice(m,1,lists[m])
         }
-            console.log(base)
             localStorage.setItem("lists",JSON.stringify(base))        
         alert("问卷已保存")
     }
     $scope.send=function(){
-        console.log(m) 
         var it = base;      
         if(localStorage.getItem('lists') == null || it[m]===undefined){
             alert("请先保存问卷")            
