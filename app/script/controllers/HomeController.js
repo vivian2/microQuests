@@ -7,7 +7,6 @@ homeModule.controller('HomeController',function($scope,base){
 		}
 	}
 	$scope.lists=base
-	console.log(base)
 	$scope.delete=function(index){
         $($('tbody tr')[index]).remove()
          localStorage.setItem('lists',JSON.stringify(base.splice(index,1)));
