@@ -36,7 +36,6 @@ editePageMoudle.controller('EditPagesController',function($scope,$stateParams,ba
     }
     $scope.save=function(){
     var lists={};  
-    console.log(m)
     lists[m]={};
     lists[m].title=$('.topTitle').val();
     lists[m].time=$('.dar').val();
@@ -90,7 +89,6 @@ editePageMoudle.controller('EditPagesController',function($scope,$stateParams,ba
             lists[m].quests[i].value.kind= "3";            
             lists[m].quests[i].value.num=$('textarea').val();
         }//else if(lists[m].quests[i].types==undefined){//在编辑页面删除时留下了ul元素未清除干净
-            console.log(lists[m])
         //}
         lists[m].values.push(lists[m].quests[i].value)
    }
